@@ -37,6 +37,7 @@ def menu(): #User input needed to select what option they want
         print("\n3. View Tasks")
         print("\n4. Exit Program")
 
+        
         choice = int(input("Choose a selection on the menu (1-4)"))
 
         if choice ==  1:
@@ -50,7 +51,6 @@ def menu(): #User input needed to select what option they want
             break
         else:
             print("Invalid option. Please select a number between 1-4\n")
-
 
 #Run application
 menu()
