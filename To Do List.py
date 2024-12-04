@@ -37,20 +37,20 @@ def menu(): #User input needed to select what option they want
         print("\n3. View Tasks")
         print("\n4. Exit Program")
 
-        
-        choice = int(input("Choose a selection on the menu (1-4)"))
+        try:
+            choice = int(input("Choose a selection on the menu (1-4)"))
 
-        if choice ==  1:
-            add_tasks()
-        elif choice == 2:
-            remove_tasks()
-        elif choice == 3:
-            view_tasks()
-        elif choice == 4:
-            print("Exiting Application, Goodbye!")
-            break
-        else:
-            print("Invalid option. Please select a number between 1-4\n")
+            if choice ==  1:
+                add_tasks()
+            elif choice == 2:
+                remove_tasks()
+            elif choice == 3:
+                view_tasks()
+            elif choice == 4:
+                print("Exiting Application, Goodbye!")
+                break         
+        except ValueError:
+            print("Invalid option. Please enter a number 1-4.\n")
 
 #Run application
 menu()
